@@ -3,6 +3,22 @@ import { View, TextInput, StyleSheet, Text } from "react-native";
 import PropTypes from "prop-types";
 
 export default class InputText extends Component {
+  focus() {
+    this.input.focus();
+  }
+
+  blur() {
+    this.input.blur();
+  }
+
+  clear() {
+    this.input.clear();
+  }
+
+  isFocused() {
+    return this.input.isFocused();
+  }
+
   render() {
     const { label, errorMessage, placeholder } = this.props;
     const { props } = this;
@@ -11,6 +27,7 @@ export default class InputText extends Component {
       <View style={styles.container}>
         <Text style={styles.titleInput}>{label}</Text>
         <TextInput
+          ref={ref => (this.input = ref)}
           placeholder={placeholder}
           underlineColorAndroid="#424242"
           {...props}
