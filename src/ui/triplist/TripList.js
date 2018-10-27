@@ -49,8 +49,7 @@ export default class TripList extends PureComponent {
         renderItem={({ item }) => this.renderRow(item)}
         keyExtractor={(item) => item.id}
         refreshing={this.state.load}
-        onRefresh={() => onRefresh())
-        }
+        onRefresh={() => onRefresh()}
       />
     );
   }
