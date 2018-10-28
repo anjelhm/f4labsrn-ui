@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { View, TextInput, StyleSheet, Text } from "react-native";
+import { View, TextInput, StyleSheet, Text, PixelRatio } from "react-native";
 import PropTypes from "prop-types";
+
+const sizeDp = PixelRatio.get();
 
 export default class InputText extends Component {
   focus() {
@@ -31,6 +33,7 @@ export default class InputText extends Component {
           placeholder={placeholder}
           underlineColorAndroid="#424242"
           {...props}
+          style={styles.input}
         />
         <Text style={styles.errorMessage}>{errorMessage}</Text>
       </View>
@@ -61,6 +64,9 @@ const styles = StyleSheet.create({
     color: "#424242",
     fontWeight: "bold",
     marginLeft: 4
+  },
+  input: {
+    height: 48 * sizeDp,
   },
   errorMessage: {
     fontSize: 14,
