@@ -15,7 +15,8 @@ export default class Button extends PureComponent {
       width,
       height,
       rounded,
-      labelText
+      labelText,
+      disabled
     } = this.props;
 
     const { props } = this;
@@ -25,10 +26,16 @@ export default class Button extends PureComponent {
       : Theme.primary.backgroundColor;
     const bColor = bgColor === null ? themeColor : bgColor;
 
+    const enabledButton = disabled
+      ? Theme.disabledButton.backgroundColor
+      : bColor;
+
     const themefontColor = secondary
       ? Theme.secondary.color
       : Theme.primary.color;
     const fColor = labelColor === null ? themefontColor : labelColor;
+
+    const enabledLabel = disabled ? Theme.disabledButton.color : fColor;
 
     const radius = rounded ? 100 : 3;
 
@@ -37,7 +44,7 @@ export default class Button extends PureComponent {
         style={{
           width: !width ? "80%" : width,
           height: !height ? 54 : height,
-          backgroundColor: bColor,
+          backgroundColor: enabledButton,
           borderRadius: radius,
           borderColor: "#424242",
           borderWidth: 0.2,
@@ -59,7 +66,7 @@ export default class Button extends PureComponent {
               style={{
                 fontFamily: Theme.fontFamiliy,
                 fontSize: Theme.buttonFontSize,
-                color: fColor
+                color: enabledLabel
               }}
             >
               {labelText}
