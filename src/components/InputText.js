@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { View, TextInput, StyleSheet, Text, PixelRatio } from "react-native";
+import { View, TextInput, StyleSheet, Text } from "react-native";
 import PropTypes from "prop-types";
-
-const sizeDp = PixelRatio.get();
 
 export default class InputText extends Component {
   focus() {
@@ -66,7 +64,7 @@ const styles = StyleSheet.create({
     marginLeft: 4
   },
   input: {
-    height: 48 * sizeDp,
+    height: 62
   },
   errorMessage: {
     fontSize: 14,
