@@ -20,8 +20,7 @@ export default class InputText extends Component {
   }
 
   render() {
-    const { label, errorMessage, placeholder } = this.props;
-    const { props } = this;
+    const { label, errorMessage, placeholder, ...rest } = this.props;
 
     return (
       <View style={styles.container}>
@@ -30,7 +29,7 @@ export default class InputText extends Component {
           ref={ref => (this.input = ref)}
           placeholder={placeholder}
           underlineColorAndroid="#424242"
-          {...props}
+          {...rest}
           style={styles.input}
         />
         <Text style={styles.errorMessage}>{errorMessage}</Text>
