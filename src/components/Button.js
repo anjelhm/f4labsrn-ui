@@ -16,10 +16,9 @@ export default class Button extends PureComponent {
       height,
       rounded,
       labelText,
-      disabled
+      disabled,
+      ...rest
     } = this.props;
-
-    const { props } = this;
 
     const themeColor = secondary
       ? Theme.secondary.backgroundColor
@@ -51,7 +50,7 @@ export default class Button extends PureComponent {
           elevation: 1,
           justifyContent: "center"
         }}
-        {...props}
+        {...rest}
       >
         <View
           style={{

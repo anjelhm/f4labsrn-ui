@@ -5,14 +5,12 @@ import PropTypes from 'prop-types';
 export default class IconButton extends PureComponent {
   render() {
 
-    const { children } = this.props;
-
-    const { props } = this;
+    const { children, ...rest } = this.props;
 
     return (
       <TouchableOpacity
         style={{ borderRadius: 360, padding: 5 }}
-        {...props}
+        {...rest}
       >
         {
           children
