@@ -4,7 +4,7 @@ import { Tile, Subtitle } from "@shoutem/ui";
 import { StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-import { Theme } from "./Theme";
+import { Theme } from "../../Theme";
 
 export default class AlertWrapper extends PureComponent {
   render() {
