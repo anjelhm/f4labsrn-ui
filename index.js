@@ -12,4 +12,5 @@ export {
   Button,
   TripList,
   CommunicationActions,
+  AlertWrapper,
 };
