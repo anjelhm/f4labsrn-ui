@@ -31,7 +31,7 @@ export default class AlertWrapper extends PureComponent {
         styleName="md-gutter"
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems: "center",
           backgroundColor: bgColor
         }}
