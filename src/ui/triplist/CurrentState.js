@@ -9,7 +9,12 @@ export default class CurrentState extends PureComponent {
     const { state, time } = this.props;
     return (
       <Row style={styles.row} styleName="fill-parent">
-        <Icon name="local-taxi" size={35} color="#fdd835" style={styles.icon} />
+        <Icon
+          name="check-circle"
+          size={35}
+          color="#fdd835"
+          style={styles.icon}
+        />
         <View styleName="vertical stretch space-between">
           <Subtitle styleName="bold" style={styles.subtitle}>
             {state.toUpperCase()}
