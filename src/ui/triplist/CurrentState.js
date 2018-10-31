@@ -15,7 +15,7 @@ export default class CurrentState extends PureComponent {
           color="#fdd835"
           style={styles.icon}
         />
-        <View styleName="vertical stretch space-between">
+        <View style={styles.info}>
           <Subtitle styleName="bold" style={styles.subtitle}>
             {state.toUpperCase()}
           </Subtitle>
@@ -53,5 +53,10 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: "#000000"
+  },
+  info: {
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 });

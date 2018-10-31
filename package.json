@@ -1,6 +1,6 @@
 {
   "name": "f4labsrn-ui",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "f4labs react native ui package",
   "main": "index.js",
   "scripts": {
