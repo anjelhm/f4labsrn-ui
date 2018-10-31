@@ -14,10 +14,10 @@ export default class CurrentState extends PureComponent {
           <Subtitle styleName="bold" style={styles.subtitle}>
             {state.toUpperCase()}
           </Subtitle>
-          <View styleName="horizontal space-between">
+          {/* <View styleName="horizontal space-between">
             <Caption styleName="bold">Hora</Caption>
             <Caption styleName="bold">{time}</Caption>
-          </View>
+          </View> */}
         </View>
       </Row>
     );

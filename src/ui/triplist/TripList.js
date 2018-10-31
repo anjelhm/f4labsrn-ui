@@ -29,10 +29,10 @@ export default class TripList extends PureComponent {
               <Subtitle style={styles.subtitle}>
                 {item.state.toUpperCase()}
               </Subtitle>
-              <View styleName="horizontal space-between">
+              {/* <View styleName="horizontal space-between">
                 <Caption>Hora</Caption>
                 <Caption>{item.time}</Caption>
-              </View>
+              </View> */}
             </View>
           </Row>
         )}
