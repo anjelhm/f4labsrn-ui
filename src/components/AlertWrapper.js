@@ -36,7 +36,12 @@ export default class AlertWrapper extends PureComponent {
           backgroundColor: bgColor
         }}
       >
-        <Icon name={nameIcon} color={Theme.secondary.color} size={25} />
+        <Icon
+          name={nameIcon}
+          color={Theme.secondary.color}
+          size={25}
+          style={{ marginLeft: 10 }}
+        />
         <Subtitle
           style={{
             color: Theme.secondary.color,
